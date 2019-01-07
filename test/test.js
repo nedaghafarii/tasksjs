@@ -1,8 +1,15 @@
 var assert = require('chai').assert;
 describe('Array', function () {
   describe('#indexOf()', function () {
-    it('should return -1 when the value is not present', function () {
-      assert.equal([1, 2, 3].indexOf(4), -1);
+    it('should return number', function () {
+      assert.equal([1, 2, 'a', 'b'], [1, 2]);
     });
   });
 });
+
+function arr1 (arr) {
+    return arr.filter(function (value) {
+      if (typeof value === 'number') {
+        return value;
+      }
+    });
