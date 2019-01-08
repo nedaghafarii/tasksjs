@@ -1,15 +1,15 @@
-var assert = require('chai').assert;
-describe('Array', function () {
-  describe('#indexOf()', function () {
-    it('should return number', function () {
-      assert.strictEqual(arr1([1, 2, 'a', 'b']), [1, 2]);
-    });
-  });
-});
+// var assert = require('chai').assert;
+// describe('Array', function () {
+//   describe('#indexOf()', function () {
+//     it('should return number', function () {
+//       assert.strictEqual(arr1([1, 2, 'a', 'b']), [1, 2]);
+//     });
+//   });
+// });
 
-function arr1 (arr) {
-  return arr.filter(value => (typeof value === 'number'));
-}
+// function arr1 (arr) {
+//   return arr.filter(value => (typeof value === 'number'));
+// }
 // task1
 var assert = require('chai').assert;
 describe('Array', function () {

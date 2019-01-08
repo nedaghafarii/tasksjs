@@ -13,9 +13,9 @@ function arr1 (arr) {
 }
 console.log(arr1(arr));
 // test2
-'use strit';
-let arr = [1, 2, 'a', 'b'];
-function arr1 (arr) {
-  return arr.filter(value => (typeof value === 'number'));
-}
-console.log(arr1(arr));
+// 'use strit';
+// let arr = [1, 2, 'a', 'b'];
+// function arr1 (arr) {
+//   return arr.filter(value => (typeof value === 'number'));
+// }
+// console.log(arr1(arr));
