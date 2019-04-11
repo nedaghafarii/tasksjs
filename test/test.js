@@ -11,7 +11,7 @@ let salaries = {
   'pete': 300,
   'mary': 250
 };
-function topSalaries () {
+function topSalaries() {
   let max = 0;
   let top;
   for (let [key, value] of Object.entries(salaries)) {
@@ -32,10 +32,13 @@ describe('get weekday', function () {
     assert.equal(getWeekDay(date), 'tus');
   });
 });
+
+// 1
+// Here you have a variable with the name date.
 let date = new Date(2012, 0, 3);
-function getWeekDay (date) {
+function getWeekDay(date) {
   let day = date.getDay();
-  let arr = ['sun', 'mon', 'tus', 'wed', 'thur', 'fri', 'sat' ];
+  let arr = ['sun', 'mon', 'tus', 'wed', 'thur', 'fri', 'sat'];
   return arr[day];
 }
 console.log(getWeekDay(date));
@@ -47,8 +50,12 @@ describe('get weekday', function () {
     assert.equal(getWeekDay(date), 'سه شنبه');
   });
 });
+
+// 2
+// You have created a variable with the same name 2 times. JS doesn't let me to run the tests
+// Please fix it
 let date = new Date(2012, 0, 3);
-function getWeekDay (date) {
+function getWeekDay(date) {
   let day = date.getDay();
   let arr = ['یک شنبه', 'دوشنبه', 'سه شنبه', 'چهارشنبه', 'پنج شنبه', 'جمعه', 'شنبه'];
   return arr[day];
@@ -69,7 +76,7 @@ describe('get dateago', function () {
   });
 });
 let date = new Date(2015, 0, 2);
-function getDateAgo (date, yesterday) {
+function getDateAgo(date, yesterday) {
   let day = date.getDate();
   let result = new Date(date);
   result.setDate(day - yesterday);
@@ -84,7 +91,7 @@ describe('get lastday of month', function () {
     assert.equal(getLastDayOfMonth(2012, 1), 29);
   });
 });
-function getLastDayOfMonth (year, month) {
+function getLastDayOfMonth(year, month) {
   if (month === (0 || 2 || 4 || 6 || 7 || 9 || 11)) {
     return 31;
   } else if (month === (3 || 5 || 8 || 10)) {
@@ -118,7 +125,7 @@ describe('sumTo', function () {
   });
 });
 // for
-function sumTo (n) {
+function sumTo(n) {
   let sum = 0;
   for (let i = 1; i <= n; i++) {
     sum += i;
@@ -142,7 +149,7 @@ describe('sumTo', function () {
     assert.equal(sumTo(100), 5050);
   });
 });
-function sumTo (n) {
+function sumTo(n) {
   return ((n - 1) === 0) ? n : n + (sumTo(n - 1));
 }
 console.log(sumTo(1));
@@ -163,7 +170,7 @@ describe('factorial', function () {
     assert.equal(factorial(5), 120);
   });
 });
-function factorial (n) {
+function factorial(n) {
   return ((n === 1) ? 1 : n * factorial(n - 1));
 }
 console.log(factorial(5));
@@ -178,7 +185,7 @@ describe('fibonacci', function () {
     assert.equal(fib(7), 13);
   });
 });
-function fib (n) {
+function fib(n) {
   if (n === 0) {
     return 0;
   } else if (n === 1) {
@@ -198,7 +205,7 @@ describe('sum numbers', function () {
     assert.equal(sum(5)(-1), 4);
   });
 });
-function sum (n) {
+function sum(n) {
   return function (m) {
     return n + m;
   };
@@ -214,7 +221,7 @@ describe('inbetween', function () {
 });
 let arr = [1, 2, 3, 4, 5, 6, 7];
 
-function inbetween (n, m) {
+function inbetween(n, m) {
   return valuse => valuse >= n && valuse <= m;
 }
 console.log(arr.filter(inbetween(3, 6)));
